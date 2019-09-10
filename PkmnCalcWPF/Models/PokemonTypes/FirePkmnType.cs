@@ -7,12 +7,28 @@ using System.Windows.Media;
 
 namespace PkmnCalcWPF.Models
 {
-    public class FirePkmnType : IPkmnType
+    public class FirePkmnType : PkmnType
     {
-        public string TypeName => "FIRE";
+        public override string TypeName => "FIRE";
 
-        public double DmgTaken { get; set; }
+        public override string TypeColor => "#F08030";
 
-        public string TypeColor => "#F08030";
+        public override double CalculateDmgMultiplierForASingleType(IPkmnType pkmnType)
+        {
+            double output;
+            if (pkmnType is BugPkmnType || pkmnType is SteelPkmnType || pkmnType is GrassPkmnType || pkmnType is IcePkmnType)
+            {
+                output = 2.0;
+            }
+            else if (pkmnType is RockPkmnType || pkmnType is FirePkmnType || pkmnType is WaterPkmnType || pkmnType is DragonPkmnType)
+            {
+                output = 0.5;
+            }
+            else
+            {
+                output = 1.0;
+            }
+            return output;
+        }
     }
 }

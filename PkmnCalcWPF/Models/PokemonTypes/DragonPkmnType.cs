@@ -1,18 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Media;
-
-namespace PkmnCalcWPF.Models
+﻿namespace PkmnCalcWPF.Models
 {
-    public class DragonPkmnType : IPkmnType
+    public class DragonPkmnType : PkmnType
     {
-        public string TypeName => "DRAGON";
+        public override string TypeName => "DRAGON";
 
-        public double DmgTaken { get; set; }
+        public override string TypeColor => "#7038F8";
 
-        public string TypeColor => "#7038F8";
+        public override double CalculateDmgMultiplierForASingleType(IPkmnType pkmnType)
+        {
+            double output;
+            if (pkmnType is DragonPkmnType)
+            {
+                output = 2.0;
+            }
+            else if (pkmnType is SteelPkmnType)
+            {
+                output = 0.5;
+            }
+            else if (pkmnType is FairyPkmnType)
+            {
+                output = 0.0;
+            }
+            else
+            {
+                output = 1.0;
+            }
+            return output;
+        }
     }
 }

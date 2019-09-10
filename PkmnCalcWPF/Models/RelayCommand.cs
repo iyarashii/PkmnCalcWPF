@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace PkmnCalcWPF.Models
 {
-
+    // base implementation of ICommand interface, all commands in this app derive from this class
     public class RelayCommand : ICommand
     {
         private Action execute;

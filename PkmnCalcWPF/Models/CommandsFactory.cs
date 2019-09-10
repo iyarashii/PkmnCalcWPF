@@ -1,18 +1,14 @@
 ﻿using PkmnCalcWPF.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace PkmnCalcWPF.Models
 {
+    // factory class used for instantiating Command objects
     public static class CommandsFactory
     {
-        //public static ICommand CreateClearTextCommand(MainWindowViewModel viewModel)
-        //{
-        //    return new ClearTextCommand(viewModel);
-        //}
+        public static ICommand CreateShowDamageTakenCommand(MainWindowViewModel viewModel)
+        {
+            return new ShowDamageTakenCommand(viewModel);
+        }
     }
 }

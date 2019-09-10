@@ -7,12 +7,32 @@ using System.Windows.Media;
 
 namespace PkmnCalcWPF.Models
 {
-    public class PsychicPkmnType : IPkmnType
+    public class PsychicPkmnType : PkmnType
     {
-        public string TypeName => "PSYCHIC";
+        public override string TypeName => "PSYCHIC";
 
-        public double DmgTaken { get; set; }
+        public override string TypeColor => "#F85888";
 
-        public string TypeColor => "#F85888";
+        public override double CalculateDmgMultiplierForASingleType(IPkmnType pkmnType)
+        {
+            double output;
+            if (pkmnType is FightingPkmnType || pkmnType is PoisonPkmnType)
+            {
+                output = 2.0;
+            }
+            else if (pkmnType is SteelPkmnType || pkmnType is PsychicPkmnType)
+            {
+                output = 0.5;
+            }
+            else if (pkmnType is DarkPkmnType)
+            {
+                output = 0.0;
+            }
+            else
+            {
+                output = 1.0;
+            }
+            return output;
+        }
     }
 }

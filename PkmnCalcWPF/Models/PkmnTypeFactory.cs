@@ -1,16 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
 
 namespace PkmnCalcWPF.Models
 {
+    // factory class used for instantiating IPkmnType objects
     public static class PkmnTypeFactory
     {
-        public static List<IPkmnType> CreatePkmnTypeList()
+        public static ObservableCollection<IPkmnType> GeneratePkmnTypeList()
         {
-            return new List<IPkmnType>();
+            ObservableCollection<IPkmnType> output = new ObservableCollection<IPkmnType>
+            {
+                CreateNormalPkmnType(),
+                CreateFightingPkmnType(),
+                CreateFlyingPkmnType(),
+                CreatePoisonPkmnType(),
+                CreateGroundPkmnType(),
+                CreateRockPkmnType(),
+                CreateBugPkmnType(),
+                CreateGhostPkmnType(),
+                CreateSteelPkmnType(),
+                CreateFirePkmnType(),
+                CreateWaterPkmnType(),
+                CreateGrassPkmnType(),
+                CreateElectricPkmnType(),
+                CreatePsychicPkmnType(),
+                CreateIcePkmnType(),
+                CreateDragonPkmnType(),
+                CreateDarkPkmnType(),
+                CreateFairyPkmnType()
+            };
+            return output;
         }
 
         public static IPkmnType CreateNormalPkmnType()

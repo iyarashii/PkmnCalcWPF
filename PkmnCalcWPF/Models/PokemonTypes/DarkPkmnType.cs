@@ -1,18 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Media;
-
-namespace PkmnCalcWPF.Models
+﻿namespace PkmnCalcWPF.Models
 {
-    public class DarkPkmnType : IPkmnType
+    public class DarkPkmnType : PkmnType
     {
-        public string TypeName => "DARK";
+        public override string TypeName => "DARK";
 
-        public double DmgTaken { get; set; }
+        public override string TypeColor => "#705848";
 
-        public string TypeColor => "#705848";
+        public override double CalculateDmgMultiplierForASingleType(IPkmnType pkmnType)
+        {
+            double output;
+            if (pkmnType is GhostPkmnType || pkmnType is PsychicPkmnType)
+            {
+                output = 2.0;
+            }
+            else if (pkmnType is FightingPkmnType || pkmnType is DarkPkmnType || pkmnType is FairyPkmnType)
+            {
+                output = 0.5;
+            }
+            else
+            {
+                output = 1.0;
+            }
+            return output;
+        }
     }
 }

@@ -70,29 +70,30 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\PokemonTypes\BugPkmnType.cs" />
-    <Compile Include="Models\ClearTextCommand.cs" />
+    <Compile Include="Models\PkmnType.cs" />
     <Compile Include="Models\CommandsFactory.cs" />
+    <Compile Include="Models\IPkmnType.cs" />
+    <Compile Include="Models\PokemonTypes\BugPkmnType.cs" />
     <Compile Include="Models\PokemonTypes\DarkPkmnType.cs" />
     <Compile Include="Models\PokemonTypes\DragonPkmnType.cs" />
     <Compile Include="Models\PokemonTypes\ElectricPkmnType.cs" />
     <Compile Include="Models\PokemonTypes\FairyPkmnType.cs" />
+    <Compile Include="Models\PokemonTypes\FightingPkmnType.cs" />
+    <Compile Include="Models\PokemonTypes\FirePkmnType.cs" />
+    <Compile Include="Models\PokemonTypes\FlyingPkmnType.cs" />
     <Compile Include="Models\PokemonTypes\GhostPkmnType.cs" />
     <Compile Include="Models\PokemonTypes\GrassPkmnType.cs" />
     <Compile Include="Models\PokemonTypes\GroundPkmnType.cs" />
     <Compile Include="Models\PokemonTypes\IcePkmnType.cs" />
-    <Compile Include="Models\PokemonTypes\FightingPkmnType.cs" />
-    <Compile Include="Models\PokemonTypes\FirePkmnType.cs" />
-    <Compile Include="Models\PokemonTypes\FlyingPkmnType.cs" />
-    <Compile Include="Models\PokemonTypes\IPkmnType.cs" />
     <Compile Include="Models\PokemonTypes\NormalPkmnType.cs" />
-    <Compile Include="Models\PokemonTypes\PkmnTypeFactory.cs" />
+    <Compile Include="Models\PkmnTypeFactory.cs" />
     <Compile Include="Models\PokemonTypes\PoisonPkmnType.cs" />
     <Compile Include="Models\PokemonTypes\PsychicPkmnType.cs" />
-    <Compile Include="Models\RelayCommand.cs" />
     <Compile Include="Models\PokemonTypes\RockPkmnType.cs" />
     <Compile Include="Models\PokemonTypes\SteelPkmnType.cs" />
     <Compile Include="Models\PokemonTypes\WaterPkmnType.cs" />
+    <Compile Include="Models\RelayCommand.cs" />
+    <Compile Include="Models\ShowDamageTakenCommand.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="Views\MainWindow.xaml.cs">
