@@ -9,7 +9,7 @@ namespace PkmnCalcWPF.ViewModels
         // view binding properties
         public IPkmnType SelectedPrimaryType { get; set; }
         public IPkmnType SelectedSecondaryType { get; set; }
-        public bool IsDamageTakenGridVisible { get; set; } = true;
+        public bool IsDamageTakenGridVisible { get; set; } = false;
         
         // collection of all pokemon types
         public ObservableCollection<IPkmnType> PkmnTypeList { get; set; } = PkmnTypeFactory.GeneratePkmnTypeList();
