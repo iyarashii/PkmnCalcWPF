@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace PkmnCalcWPF.ViewModels
 {
+    // wrapper for PkmnType model
     public class PkmnTypeViewModel : BaseViewModel, IPkmnType
     {
         public PkmnTypeViewModel(IPkmnType pkmnType)
