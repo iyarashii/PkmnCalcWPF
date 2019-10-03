@@ -12,7 +12,7 @@ namespace PkmnCalcWPF.ViewModels
         public bool IsDamageTakenGridVisible { get; set; } = false;
         
         // collection of all pokemon types
-        public ObservableCollection<IPkmnType> PkmnTypeList { get; set; } = PkmnTypeFactory.GeneratePkmnTypeList();
+        public ObservableCollection<IPkmnType> PkmnTypeList { get; set; } = PkmnTypeViewModelFactory.GeneratePkmnTypeList();
 
         // command that shows damage taken by selected pokemon type combination after the button is clicked
         public ICommand ShowDamageTakenCommand { get; set; }

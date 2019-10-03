@@ -1,7 +1,7 @@
 ﻿namespace PkmnCalcWPF.Models
 {
-    // implements IPkmnType and INotifyPropertyChanged by inheriting BaseViewModel, all pokemon types in this app derive from this class
-    public abstract class PkmnType : ViewModels.BaseViewModel, IPkmnType
+    // all pokemon types in this app derive from this class
+    public abstract class PkmnType : IPkmnType
     {
         public abstract string TypeName { get; }
         public double DmgMultiplier { get; set; }

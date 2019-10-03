@@ -7,6 +7,5 @@
         double DmgMultiplier { get; set; }
         string TypeColor { get; }
         double CalculateDmgMultiplier(IPkmnType defendingPkmnPrimaryType, IPkmnType defendingPkmnSecondaryType);
-        double CalculateDmgMultiplierForASingleType(IPkmnType pkmnType);
     }
 }
