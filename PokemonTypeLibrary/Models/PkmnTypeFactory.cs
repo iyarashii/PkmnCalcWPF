@@ -1,6 +1,7 @@
 ﻿using System.Collections.ObjectModel;
+using System.Linq;
 
-namespace PkmnCalcWPF.Models
+namespace PokemonTypeLibrary.Models
 {
     // factory class used for instantiating IPkmnType objects
     public static class PkmnTypeFactory
@@ -29,6 +30,11 @@ namespace PkmnCalcWPF.Models
                 CreateFairyPkmnType()
             };
             return output;
+        }
+
+        public static IPkmnType CreateEmptyPkmnType()
+        {
+            return new EmptyPkmnType();
         }
 
         public static IPkmnType CreateNormalPkmnType()

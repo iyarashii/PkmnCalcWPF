@@ -1,4 +1,5 @@
 ﻿using PkmnCalcWPF.ViewModels;
+using PokemonTypeLibrary.Models;
 
 namespace PkmnCalcWPF.Models
 {
@@ -17,7 +18,7 @@ namespace PkmnCalcWPF.Models
         public static void ExecuteShowDamageTakenCommand()
         {
             // check if some type if selected if not hide the DataGrid
-            if(viewModel.SelectedPrimaryType == null && viewModel.SelectedSecondaryType == null)
+            if(viewModel.SelectedPrimaryType is EmptyPkmnType && viewModel.SelectedSecondaryType is EmptyPkmnType)
             {
                 viewModel.IsDamageTakenGridVisible = false;
                 return;

@@ -1,23 +1,23 @@
-﻿namespace PkmnCalcWPF.Models
+﻿namespace PokemonTypeLibrary.Models
 {
-    public class ElectricPkmnType : PkmnType
+    public class PsychicPkmnType : PkmnType
     {
-        public override string TypeName => "ELECTRIC";
+        public override string TypeName => "PSYCHIC";
 
-        public override string TypeColor => "#F8D030";
+        public override string TypeColor => "#F85888";
 
         public override double CalculateDmgMultiplierForASingleType(IPkmnType pkmnType)
         {
             double output;
-            if (pkmnType is FlyingPkmnType || pkmnType is WaterPkmnType)
+            if (pkmnType is FightingPkmnType || pkmnType is PoisonPkmnType)
             {
                 output = 2.0;
             }
-            else if (pkmnType is GrassPkmnType || pkmnType is ElectricPkmnType || pkmnType is DragonPkmnType)
+            else if (pkmnType is SteelPkmnType || pkmnType is PsychicPkmnType)
             {
                 output = 0.5;
             }
-            else if (pkmnType is GroundPkmnType)
+            else if (pkmnType is DarkPkmnType)
             {
                 output = 0.0;
             }

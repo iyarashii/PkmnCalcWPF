@@ -1,6 +1,6 @@
-﻿namespace PkmnCalcWPF.Models
+﻿namespace PokemonTypeLibrary.Models
 {
-    // all pokemon types in this app derive from this class
+    // all pokemon types derive from this class
     public abstract class PkmnType : IPkmnType
     {
         public abstract string TypeName { get; }
@@ -14,7 +14,7 @@
             double secondaryTypeMultiplier = CalculateDmgMultiplierForASingleType(defendingPkmnSecondaryType);
 
             // check if both types are the same type
-            if (defendingPkmnPrimaryType == defendingPkmnSecondaryType)
+            if (defendingPkmnPrimaryType.TypeName == defendingPkmnSecondaryType.TypeName)
             {
                 return primaryTypeMultiplier;
             }

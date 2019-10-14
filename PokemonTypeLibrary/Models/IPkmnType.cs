@@ -1,4 +1,4 @@
-﻿namespace PkmnCalcWPF.Models
+﻿namespace PokemonTypeLibrary.Models
 {
     // interface of PkmnType Class
     public interface IPkmnType

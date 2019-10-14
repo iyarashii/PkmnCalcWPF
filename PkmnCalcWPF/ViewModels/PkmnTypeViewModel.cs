@@ -1,4 +1,4 @@
-﻿using PkmnCalcWPF.Models;
+﻿using PokemonTypeLibrary.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

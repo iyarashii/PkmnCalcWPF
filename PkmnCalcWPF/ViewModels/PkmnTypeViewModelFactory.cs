@@ -4,7 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PkmnCalcWPF.Models;
+using PokemonTypeLibrary.Models;
 
 namespace PkmnCalcWPF.ViewModels
 {
@@ -34,6 +34,14 @@ namespace PkmnCalcWPF.ViewModels
                 CreatePkmnTypeViewModel(PkmnTypeFactory.CreateDarkPkmnType()),
                 CreatePkmnTypeViewModel(PkmnTypeFactory.CreateFairyPkmnType())
             };
+            return output;
+        }
+
+        public static ObservableCollection<IPkmnType> PopulateComboboxPkmnTypeList()
+        {
+            ObservableCollection<IPkmnType> output = GeneratePkmnTypeList();
+            output.Insert(0, CreatePkmnTypeViewModel(PkmnTypeFactory.CreateEmptyPkmnType()));
+
             return output;
         }
 

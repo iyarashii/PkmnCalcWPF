@@ -1,4 +1,4 @@
-﻿namespace PkmnCalcWPF.Models
+﻿namespace PokemonTypeLibrary.Models
 {
     public class FairyPkmnType : PkmnType
     {
