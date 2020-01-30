@@ -17,7 +17,7 @@ namespace PkmnCalcWPF.Models
         // executes CalculateDmgMultiplier method on each member of PkmnTypeList collection
         public static void ExecuteShowDamageTakenCommand()
         {
-            // check if some type if selected if not hide the DataGrid
+            // check if some type is selected if not hide the DataGrid
             if(viewModel.SelectedPrimaryType is EmptyPkmnType && viewModel.SelectedSecondaryType is EmptyPkmnType)
             {
                 viewModel.IsDamageTakenGridVisible = false;
