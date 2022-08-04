@@ -1,5 +1,5 @@
 # PkmnCalcWPF
-![Working app image](https://i.imgur.com/hqDg4XK.png)
+![Working app image](https://i.imgur.com/hqDg4XK.png)  
 WPF MVVM app created as a way to learn WPF. This app shows damage multipliers that affect defending pokemon.  
 After selecting types and hitting the `Show damage taken` button it displays every possible attacking pokemon type and
 a multiplier of its damage. The list of multipliers and types is sorted by the dmg multiplier from highest to lowest by default.  
